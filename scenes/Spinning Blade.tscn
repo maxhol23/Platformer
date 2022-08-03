@@ -4,7 +4,8 @@
 [ext_resource path="res://scenes/Spinning Blade.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=1]
-length = 0.001
+length = 0.4
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
 tracks/0/interp = 1
@@ -55,6 +56,8 @@ anims/Spin = SubResource( 2 )
 curve = SubResource( 3 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( -3, -29 )
+rotate = false
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
 texture = ExtResource( 1 )
