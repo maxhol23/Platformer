@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/random/trap_spikes_anim_strip_7.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Spike Spitter.gd" type="Script" id=2]
+[ext_resource path="res://sprites/random/spikes_trap.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.5, 2 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="SpikeSpitter" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Arrow" type="Area2D" parent="." groups=["Deadly"]]
+position = Vector2( 446, 46 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Arrow"]
+rotation = 1.5708
+texture = ExtResource( 3 )
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow"]
+shape = SubResource( 1 )
+
+[node name="SpitterSprite" type="Sprite" parent="."]
+position = Vector2( 563, 47 )
+rotation = 1.5708
+texture = ExtResource( 1 )
+hframes = 7
+frame = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Position2D" type="Position2D" parent="SpitterSprite"]
+position = Vector2( 0, -22 )
+
+[node name="SpikeEnd" type="Area2D" parent="."]
+position = Vector2( 358, 46 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeEnd"]
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="SpikeEnd" to="." method="_on_SpikeEnd_area_entered"]

@@ -3,14 +3,6 @@
 [ext_resource path="res://On (38x38).png" type="Texture" id=1]
 [ext_resource path="res://scenes/Spinning Blade.gd" type="Script" id=2]
 
-[sub_resource type="Curve2D" id=3]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -4, -33, 0, 0, 0, 0, 67, -33 )
-}
-
-[sub_resource type="CircleShape2D" id=4]
-radius = 18.0278
-
 [sub_resource type="Animation" id=1]
 length = 0.4
 loop = true
@@ -44,8 +36,22 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
 }
 
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -4, -33, 0, 0, 0, 0, 67, -33 )
+}
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 18.0278
+
 [node name="Spinning Blade" type="Node2D"]
 script = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Spin"
+playback_speed = -3.0
+anims/RESET = SubResource( 1 )
+anims/Spin = SubResource( 2 )
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource( 3 )
@@ -58,14 +64,7 @@ rotate = false
 texture = ExtResource( 1 )
 hframes = 8
 
-[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/Sprite"]
+[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/Sprite" groups=["Deadly"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Sprite/Area2D"]
 shape = SubResource( 4 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-playback_speed = -3.0
-anims/RESET = SubResource( 1 )
-anims/Spin = SubResource( 2 )
-
-[connection signal="body_entered" from="Path2D/PathFollow2D/Sprite/Area2D" to="." method="_on_Area2D_body_entered"]
