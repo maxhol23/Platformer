@@ -2,11 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-valid=false
+path="res://.import/lab.webp-b05b4bfef534edfa48bb67748075dc5c.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://sprites/bala.jpg"
+source_file="res://sprites/random/lab.webp"
+dest_files=[ "res://.import/lab.webp-b05b4bfef534edfa48bb67748075dc5c.stex" ]
+
 [params]
 
 compress/mode=0

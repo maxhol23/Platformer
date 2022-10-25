@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://sprites/ka1.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menu.gd" type="Script" id=2]
 [ext_resource path="res://for.jpg" type="Texture" id=3]
+[ext_resource path="res://sprites/tiles/lab2.jpg" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -25,6 +26,11 @@ script = ExtResource( 2 )
 position = Vector2( 640, 360 )
 scale = Vector2( 1.38829, 1.38996 )
 texture = ExtResource( 3 )
+
+[node name="Lab2" type="Sprite" parent="Sprite"]
+position = Vector2( -3.05176e-05, 36.6917 )
+scale = Vector2( 0.480207, 0.620855 )
+texture = ExtResource( 4 )
 
 [node name="Start" type="VBoxContainer" parent="."]
 margin_left = 556.0

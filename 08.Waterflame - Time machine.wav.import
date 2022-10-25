@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/08.Waterflame - Time machine.wav-1ee8c45e8e352d50f114281bb8deda7a.mp3str"
+
+[deps]
+
+source_file="res://08.Waterflame - Time machine.wav"
+dest_files=[ "res://.import/08.Waterflame - Time machine.wav-1ee8c45e8e352d50f114281bb8deda7a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

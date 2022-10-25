@@ -2,11 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-valid=false
+path="res://.import/purple goop.jpg-1a4429a987074393cc3aa7360ca0c560.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://sprites/dark-blue-storm-clouds-free-video.jpg"
+source_file="res://scenes/purple goop.jpg"
+dest_files=[ "res://.import/purple goop.jpg-1a4429a987074393cc3aa7360ca0c560.stex" ]
+
 [params]
 
 compress/mode=0

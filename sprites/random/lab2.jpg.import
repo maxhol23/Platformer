@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/big4k.jpg-785511c6363e22d54bd9b1e4dfd98f99.stex"
+path="res://.import/lab2.jpg-1b2106205c551803d3b91733432683c9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/big4k.jpg"
-dest_files=[ "res://.import/big4k.jpg-785511c6363e22d54bd9b1e4dfd98f99.stex" ]
+source_file="res://sprites/random/lab2.jpg"
+dest_files=[ "res://.import/lab2.jpg-1b2106205c551803d3b91733432683c9.stex" ]
 
 [params]
 
