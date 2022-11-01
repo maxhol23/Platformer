@@ -2,28 +2,26 @@ extends Node
 
 onready var music = AudioStreamPlayer.new()
 
+var music_tracks = {
+	"main": "res://08.Waterflame - Time machine.wav"
+}
 
-	
-	
-
-
-
-
-
-
-
+var sound_effects
+"jump" "res://jump.wav"
+"hurt" "res://hitHurt.wav"
 
 
 
 
 var music_db = 1
-var sound_db = 1
+var sound_db = 10000000000
 
 func change_music_db(val):
 	music_db = linear2db(val)
 
 func change_sound_db(val):
 	sound_db = linear2db(val)
+	
 	
 func _ready():
 	music.stream = load(music_tracks["main"])

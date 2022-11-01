@@ -44,7 +44,7 @@ margin_bottom = -58.0
 script = ExtResource( 3 )
 
 [node name="PurpleGoop" type="Sprite" parent="."]
-position = Vector2( 679, 495.5 )
+position = Vector2( 685, 484 )
 scale = Vector2( 2.13333, 2.025 )
 texture = ExtResource( 2 )
 
